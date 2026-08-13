@@ -52,6 +52,9 @@ export const en = {
     success: "Message sent! I'll get back to you soon.",
     error: 'Something went wrong. Try again or email me directly.',
   },
+  footer: {
+    copy: '© 2026 Niki Tsolaki. Built with Next.js & GSAP.',
+  },
 }
 
 export type Translations = typeof en

@@ -54,4 +54,7 @@ export const el: Translations = {
     success: 'Το μήνυμα στάλθηκε! Θα επικοινωνήσω σύντομα.',
     error: 'Κάτι πήγε στραβά. Δοκίμασε ξανά ή επικοινώνησε απευθείας.',
   },
+  footer: {
+    copy: '© 2026 Niki Tsolaki. Κατασκευάστηκε με Next.js & GSAP.',
+  },
 }
