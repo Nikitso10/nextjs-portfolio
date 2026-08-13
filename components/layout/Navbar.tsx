@@ -36,7 +36,7 @@ export default function Navbar() {
         }
       },
     })
-  }, { scope: navRef })
+  })
 
   const links = [
     { href: '#about', label: t.nav.about },

@@ -31,11 +31,12 @@ export default function Experience() {
   }, { scope: sectionRef })
 
   return (
-    <SectionWrapper id="experience" className="bg-white/[0.01]">
-      <p className="text-xs text-purple uppercase tracking-widest mb-2">{t.experience.sectionLabel}</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">{t.experience.sectionTitle}</h2>
+    <div ref={sectionRef}>
+      <SectionWrapper id="experience" className="bg-white/[0.01]">
+        <p className="text-xs text-purple uppercase tracking-widest mb-2">{t.experience.sectionLabel}</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">{t.experience.sectionTitle}</h2>
 
-      <div ref={sectionRef} className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-16">
         {/* Work */}
         <div>
           <p className="text-sm text-muted uppercase tracking-widest mb-8">{t.experience.workTitle}</p>
@@ -75,6 +76,7 @@ export default function Experience() {
           </div>
         </div>
       </div>
-    </SectionWrapper>
+      </SectionWrapper>
+    </div>
   )
 }
