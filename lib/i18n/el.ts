@@ -1,0 +1,57 @@
+import type { Translations } from './en'
+
+export const el: Translations = {
+  nav: {
+    about: 'Σχετικά',
+    projects: 'Projects',
+    skills: 'Skills',
+    experience: 'Εμπειρία',
+    contact: 'Επικοινωνία',
+  },
+  hero: {
+    greeting: 'Γεια, είμαι',
+    title: 'Frontend Developer',
+    titleSuffix: '& Ιδρύτρια',
+    bio: 'Φτιάχνω γρήγορα, όμορφα web & mobile products.\nΔημιουργός του Metriqs — SaaS για επαγγελματίες κατασκευαστικού.',
+    cta: 'Δες τη δουλειά μου',
+    github: 'GitHub',
+  },
+  about: {
+    sectionLabel: 'Ποια Είμαι',
+    sectionTitle: 'Σχετικά με Μένα',
+    bio: 'Frontend Developer με 3+ χρόνια εμπειρία στη δημιουργία responsive, υψηλής ποιότητας interfaces. Ειδικεύομαι σε React και Next.js και επεκτείνομαι σε full-stack development. Είμαι επίσης ιδρύτρια του Metriqs, ενός mobile SaaS για επαγγελματίες του κατασκευαστικού κλάδου.',
+    location: 'Θεσσαλονίκη, Ελλάδα',
+    education: 'Πτυχίο Πληροφορικής, ΕΑΠ',
+    languages: 'Ελληνικά · Αγγλικά (C2) · Γαλλικά (B2)',
+    status: 'Ανοιχτή σε ευκαιρίες',
+  },
+  projects: {
+    sectionLabel: 'Επιλεγμένες Δουλειές',
+    sectionTitle: 'Featured Projects',
+    otherTitle: 'Άλλα Projects',
+    live: 'Live',
+    github: 'GitHub',
+  },
+  skills: {
+    sectionLabel: 'Τι Χρησιμοποιώ',
+    sectionTitle: 'Skills',
+  },
+  experience: {
+    sectionLabel: 'Ιστορικό',
+    sectionTitle: 'Εμπειρία & Σπουδές',
+    workTitle: 'Εργασία',
+    educationTitle: 'Εκπαίδευση',
+    languagesTitle: 'Γλώσσες',
+  },
+  contact: {
+    sectionLabel: 'Επικοινωνία',
+    sectionTitle: 'Επικοινωνήστε μαζί μου',
+    subtitle: 'Έχεις κάποιο project ή θέλεις να μιλήσουμε; Στείλε μου μήνυμα.',
+    namePlaceholder: 'Το όνομά σου',
+    emailPlaceholder: 'το@email.σου',
+    messagePlaceholder: 'Το μήνυμά σου...',
+    submit: 'Αποστολή',
+    success: 'Το μήνυμα στάλθηκε! Θα επικοινωνήσω σύντομα.',
+    error: 'Κάτι πήγε στραβά. Δοκίμασε ξανά ή επικοινώνησε απευθείας.',
+  },
+}
