@@ -16,10 +16,9 @@ export default function Skills() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.set('.skill-group', { opacity: 0, x: -40 })
+    gsap.set('.skill-group', { opacity: 0 })
     gsap.to('.skill-group', {
       opacity: 1,
-      x: 0,
       duration: 0.7,
       stagger: 0.2,
       ease: 'power3.out',
