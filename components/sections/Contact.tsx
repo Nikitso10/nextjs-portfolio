@@ -75,7 +75,10 @@ export default function Contact() {
             placeholder={t.contact.namePlaceholder}
             className={inputClass}
             value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            onChange={(e) => {
+              if (status === 'error') setStatus('idle')
+              setForm({ ...form, name: e.target.value })
+            }}
             required
             aria-label={t.contact.namePlaceholder}
           />
@@ -84,7 +87,10 @@ export default function Contact() {
             placeholder={t.contact.emailPlaceholder}
             className={inputClass}
             value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            onChange={(e) => {
+              if (status === 'error') setStatus('idle')
+              setForm({ ...form, email: e.target.value })
+            }}
             required
             aria-label={t.contact.emailPlaceholder}
           />
@@ -93,7 +99,10 @@ export default function Contact() {
             placeholder={t.contact.messagePlaceholder}
             className={`${inputClass} resize-none`}
             value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
+            onChange={(e) => {
+              if (status === 'error') setStatus('idle')
+              setForm({ ...form, message: e.target.value })
+            }}
             required
             aria-label={t.contact.messagePlaceholder}
           />
@@ -101,9 +110,10 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === 'loading'}
+            aria-busy={status === 'loading'}
             className="px-6 py-3 rounded-lg text-sm font-semibold text-white gradient-btn disabled:opacity-50 transition-opacity"
           >
-            {status === 'loading' ? '...' : t.contact.submit}
+            {status === 'loading' ? 'Sending...' : t.contact.submit}
           </button>
 
           {status === 'success' && (
