@@ -35,7 +35,7 @@ describe('ProjectCard', () => {
 
   it('renders live link when liveUrl is provided', () => {
     render(<ProjectCard project={mockProject} lang="en" />)
-    expect(screen.getByRole('link', { name: /live/i })).toHaveAttribute('href', 'https://example.com')
+    expect(screen.getByRole('link', { name: /live ↗/i })).toHaveAttribute('href', 'https://example.com')
   })
 
   it('shows FOUNDER badge when badge prop provided', () => {

@@ -8,6 +8,7 @@ import { skillGroups } from '@/data/skills'
 
 export default function Skills() {
   const { t, lang } = useLanguage()
+  // ref used by GSAP ScrollTrigger animations added in Task 11
   const sectionRef = useRef<HTMLDivElement>(null)
 
   return (

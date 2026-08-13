@@ -8,6 +8,7 @@ import { workExperience, education, languages } from '@/data/experience'
 
 export default function Experience() {
   const { t, lang } = useLanguage()
+  // ref used by GSAP ScrollTrigger animations added in Task 11
   const sectionRef = useRef<HTMLDivElement>(null)
 
   return (

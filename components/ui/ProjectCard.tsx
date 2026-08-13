@@ -8,7 +8,7 @@ type Props = {
 
 export default function ProjectCard({ project, lang, hero = false }: Props) {
   return (
-    <div className={`relative rounded-xl gradient-border gradient-bg p-5 flex flex-col gap-4 h-full ${hero ? 'col-span-full' : ''}`}>
+    <div className="relative rounded-xl gradient-border gradient-bg p-5 flex flex-col gap-4 h-full">
       {project.badge && (
         <span
           className="absolute top-0 right-0 text-xs font-bold text-white px-3 py-1 rounded-tr-xl rounded-bl-lg gradient-btn"
@@ -36,7 +36,6 @@ export default function ProjectCard({ project, lang, hero = false }: Props) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${project.title} live demo (opens in new tab)`}
             className="text-xs text-purple border border-purple/40 px-3 py-1 rounded hover:bg-purple/10 transition-colors"
           >
             Live ↗

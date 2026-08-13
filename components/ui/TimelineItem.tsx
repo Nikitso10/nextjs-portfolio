@@ -19,8 +19,8 @@ export default function TimelineItem({ role, company, period, bullets, highlight
       </div>
       <p className="text-xs text-purple mb-3">{period}</p>
       <ul className="flex flex-col gap-1">
-        {bullets.map((b, i) => (
-          <li key={i} className="text-sm text-muted leading-relaxed flex gap-2">
+        {bullets.map((b) => (
+          <li key={b} className="text-sm text-muted leading-relaxed flex gap-2">
             <span className="text-purple mt-1" aria-hidden="true">›</span>
             <span>{b}</span>
           </li>
