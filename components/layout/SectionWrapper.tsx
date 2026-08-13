@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react'
+
 type Props = {
   id: string
-  children: React.ReactNode
+  children: ReactNode
   className?: string
 }
 

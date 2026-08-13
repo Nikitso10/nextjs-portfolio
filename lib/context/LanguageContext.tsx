@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import { en } from '@/lib/i18n/en'
 import { el } from '@/lib/i18n/el'
 import type { Translations } from '@/lib/i18n/en'
@@ -21,6 +21,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem('lang')
     return stored === 'en' || stored === 'el' ? stored : 'en'
   })
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
 
   function toggleLang() {
     const next: Language = lang === 'en' ? 'el' : 'en'

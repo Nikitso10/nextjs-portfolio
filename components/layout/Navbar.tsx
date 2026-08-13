@@ -14,6 +14,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    if (menuOpen) window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [menuOpen])
+
   const links = [
     { href: '#about', label: t.nav.about },
     { href: '#projects', label: t.nav.projects },
@@ -46,6 +54,7 @@ export default function Navbar() {
           {/* Language toggle */}
           <button
             onClick={toggleLang}
+            aria-label={lang === 'en' ? 'Switch to Greek' : 'Switch to English'}
             className="text-xs font-semibold px-3 py-1 rounded-full border border-purple/40 text-purple hover:bg-purple/10 transition-colors"
           >
             {lang === 'en' ? 'GR' : 'EN'}
@@ -56,6 +65,7 @@ export default function Navbar() {
             className="md:hidden text-muted"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             <div className={`w-5 h-0.5 bg-current mb-1 transition-all ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
             <div className={`w-5 h-0.5 bg-current mb-1 transition-all ${menuOpen ? 'opacity-0' : ''}`} />
