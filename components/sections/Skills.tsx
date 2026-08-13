@@ -1,15 +1,34 @@
 'use client'
 
 import { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '@/lib/context/LanguageContext'
 import SectionWrapper from '@/components/layout/SectionWrapper'
 import SkillTag from '@/components/ui/SkillTag'
 import { skillGroups } from '@/data/skills'
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Skills() {
   const { t, lang } = useLanguage()
-  // ref used by GSAP ScrollTrigger animations added in Task 11
   const sectionRef = useRef<HTMLDivElement>(null)
+
+  useGSAP(() => {
+    gsap.set('.skill-group', { opacity: 0, x: -40 })
+    gsap.to('.skill-group', {
+      opacity: 1,
+      x: 0,
+      duration: 0.7,
+      stagger: 0.2,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+      },
+    })
+  }, { scope: sectionRef })
 
   return (
     <SectionWrapper id="skills">

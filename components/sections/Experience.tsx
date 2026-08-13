@@ -1,15 +1,34 @@
 'use client'
 
 import { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '@/lib/context/LanguageContext'
 import SectionWrapper from '@/components/layout/SectionWrapper'
 import TimelineItem from '@/components/ui/TimelineItem'
 import { workExperience, education, languages } from '@/data/experience'
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Experience() {
   const { t, lang } = useLanguage()
-  // ref used by GSAP ScrollTrigger animations added in Task 11
   const sectionRef = useRef<HTMLDivElement>(null)
+
+  useGSAP(() => {
+    gsap.set('.timeline-item', { opacity: 0, y: 30 })
+    gsap.to('.timeline-item', {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 85%',
+      },
+    })
+  }, { scope: sectionRef })
 
   return (
     <SectionWrapper id="experience" className="bg-white/[0.01]">

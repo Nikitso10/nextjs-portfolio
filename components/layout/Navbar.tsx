@@ -1,12 +1,18 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '@/lib/context/LanguageContext'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Navbar() {
   const { t, lang, toggleLang } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -22,6 +28,22 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', onKey)
   }, [menuOpen])
 
+  useGSAP(() => {
+    ScrollTrigger.create({
+      start: 'top -80',
+      onEnter: () => {
+        if (navRef.current) {
+          navRef.current.classList.add('nav-scrolled')
+        }
+      },
+      onLeaveBack: () => {
+        if (navRef.current) {
+          navRef.current.classList.remove('nav-scrolled')
+        }
+      },
+    })
+  }, { scope: navRef })
+
   const links = [
     { href: '#about', label: t.nav.about },
     { href: '#projects', label: t.nav.projects },
@@ -36,7 +58,7 @@ export default function Navbar() {
         scrolled ? 'bg-bg/80 backdrop-blur-md border-b border-white/5' : ''
       }`}
     >
-      <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4">
+      <nav ref={navRef} className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 transition-all duration-300">
         <a href="#" className="text-sm font-bold gradient-text">NT</a>
 
         {/* Desktop links */}
