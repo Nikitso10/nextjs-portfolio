@@ -31,7 +31,7 @@ export const projects: Project[] = [
     },
     tags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind'],
     liveUrl: 'https://nextjs-dev-event.netlify.app/',
-    githubUrl: 'https://github.com/Nikitso10',
+    githubUrl: 'https://github.com/Nikitso10/nextjs-dev-event',
     tier: 'featured',
   },
   {
