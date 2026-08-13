@@ -73,7 +73,12 @@ export const education: EducationEntry[] = [
   },
 ]
 
-export const languages = [
+export type LanguageEntry = {
+  name: { en: string; el: string }
+  level: string
+}
+
+export const languages: LanguageEntry[] = [
   { name: { en: 'Greek', el: 'Ελληνικά' }, level: 'Native' },
   { name: { en: 'English', el: 'Αγγλικά' }, level: 'C2' },
   { name: { en: 'French', el: 'Γαλλικά' }, level: 'B2' },
