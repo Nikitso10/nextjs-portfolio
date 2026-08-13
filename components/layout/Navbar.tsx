@@ -10,15 +10,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Navbar() {
   const { t, lang, toggleLang } = useLanguage()
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
   const navRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -32,13 +26,13 @@ export default function Navbar() {
     ScrollTrigger.create({
       start: 'top -80',
       onEnter: () => {
-        if (navRef.current) {
-          navRef.current.classList.add('nav-scrolled')
+        if (headerRef.current) {
+          headerRef.current.classList.add('nav-scrolled')
         }
       },
       onLeaveBack: () => {
-        if (navRef.current) {
-          navRef.current.classList.remove('nav-scrolled')
+        if (headerRef.current) {
+          headerRef.current.classList.remove('nav-scrolled')
         }
       },
     })
@@ -54,9 +48,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-bg/80 backdrop-blur-md border-b border-white/5' : ''
-      }`}
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <nav ref={navRef} className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 transition-all duration-300">
         <a href="#" className="text-sm font-bold gradient-text">NT</a>

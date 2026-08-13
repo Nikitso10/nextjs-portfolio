@@ -16,9 +16,10 @@ export default function Skills() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.set('.skill-group', { opacity: 0 })
+    gsap.set('.skill-group', { opacity: 0, y: 20 })
     gsap.to('.skill-group', {
       opacity: 1,
+      y: 0,
       duration: 0.7,
       stagger: 0.2,
       ease: 'power3.out',
@@ -30,11 +31,12 @@ export default function Skills() {
   }, { scope: sectionRef })
 
   return (
+    <div ref={sectionRef}>
     <SectionWrapper id="skills">
       <p className="text-xs text-purple uppercase tracking-widest mb-2">{t.skills.sectionLabel}</p>
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">{t.skills.sectionTitle}</h2>
 
-      <div ref={sectionRef} className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8">
         {skillGroups.map((group) => (
           <div key={group.category.en} className="skill-group">
             <p
@@ -54,5 +56,6 @@ export default function Skills() {
         ))}
       </div>
     </SectionWrapper>
+    </div>
   )
 }
