@@ -33,4 +33,10 @@ describe('LanguageContext', () => {
     fireEvent.click(screen.getByText('toggle'))
     expect(screen.getByTestId('lang').textContent).toBe('en')
   })
+
+  it('hydrates from stored language on mount', () => {
+    localStorage.setItem('lang', 'el')
+    render(<LanguageProvider><TestComponent /></LanguageProvider>)
+    expect(screen.getByTestId('lang').textContent).toBe('el')
+  })
 })

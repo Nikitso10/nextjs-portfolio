@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useState, ReactNode } from 'react'
 import { en } from '@/lib/i18n/en'
 import { el } from '@/lib/i18n/el'
 import type { Translations } from '@/lib/i18n/en'
@@ -16,12 +16,11 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>('en')
-
-  useEffect(() => {
-    const stored = localStorage.getItem('lang') as Language | null
-    if (stored === 'en' || stored === 'el') setLang(stored)
-  }, [])
+  const [lang, setLang] = useState<Language>(() => {
+    if (typeof window === 'undefined') return 'en'
+    const stored = localStorage.getItem('lang')
+    return stored === 'en' || stored === 'el' ? stored : 'en'
+  })
 
   function toggleLang() {
     const next: Language = lang === 'en' ? 'el' : 'en'
