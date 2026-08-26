@@ -16,16 +16,16 @@ export default function Skills() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.set('.skill-group', { opacity: 0, y: 20 })
+    gsap.set('.skill-group', { opacity: 0, y: 50 })
     gsap.to('.skill-group', {
       opacity: 1,
       y: 0,
-      duration: 0.7,
-      stagger: 0.2,
+      duration: 1.1,
+      stagger: 0.3,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 80%',
+        start: 'top 40%',
       },
     })
   }, { scope: sectionRef })

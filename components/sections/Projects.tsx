@@ -20,16 +20,16 @@ export default function Projects() {
   const otherProjects = projects.filter((p) => p.tier === 'other')
 
   useGSAP(() => {
-    gsap.set('.project-card', { opacity: 0, y: 60 })
+    gsap.set('.project-card', { opacity: 0, y: 80 })
     gsap.to('.project-card', {
       opacity: 1,
       y: 0,
-      duration: 0.7,
-      stagger: 0.1,
+      duration: 1.2,
+      stagger: 0.2,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 80%',
+        start: 'top 40%',
       },
     })
   }, { scope: sectionRef })

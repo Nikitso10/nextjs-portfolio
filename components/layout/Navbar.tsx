@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      className="nav-header fixed top-0 left-0 right-0 z-50"
     >
       <nav ref={navRef} className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 transition-all duration-300">
         <a href="#" className="text-sm font-bold gradient-text">NT</a>

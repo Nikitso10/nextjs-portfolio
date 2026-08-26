@@ -37,10 +37,15 @@ body {
   background: linear-gradient(90deg, #a855f7, #ec4899);
 }
 
+.nav-header {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
+}
+
 .nav-scrolled {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: rgba(15, 10, 26, 0.9);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
 }

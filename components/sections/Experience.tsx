@@ -16,16 +16,16 @@ export default function Experience() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.set('.timeline-item', { opacity: 0, y: 30 })
+    gsap.set('.timeline-item', { opacity: 0, y: 60 })
     gsap.to('.timeline-item', {
       opacity: 1,
       y: 0,
-      duration: 0.6,
-      stagger: 0.15,
+      duration: 1.1,
+      stagger: 0.25,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 85%',
+        start: 'top 40%',
       },
     })
   }, { scope: sectionRef })

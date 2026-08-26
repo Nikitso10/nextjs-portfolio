@@ -12,13 +12,13 @@ export default function Hero() {
   useGSAP(() => {
     gsap.set(['.hero-greeting', '.hero-name', '.hero-title', '.hero-bio', '.hero-cta'], {
       opacity: 0,
-      y: 40,
+      y: 60,
     })
     gsap.to(['.hero-greeting', '.hero-name', '.hero-title', '.hero-bio', '.hero-cta'], {
       opacity: 1,
       y: 0,
-      duration: 0.8,
-      stagger: 0.15,
+      duration: 1.2,
+      stagger: 0.2,
       ease: 'power3.out',
     })
 
