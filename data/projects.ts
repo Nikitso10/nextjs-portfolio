@@ -53,6 +53,7 @@ export const projects: Project[] = [
       el: 'Mobile app για εξερεύνηση ταινιών, αποθήκευση αγαπημένων και διαχείριση προφίλ.',
     },
     tags: ['React Native', 'Expo', 'Appwrite', 'TypeScript'],
+    liveUrl: 'https://movie-app-react-native-expo-tsolaki.vercel.app/',
     githubUrl: 'https://github.com/Nikitso10/movie_app',
     tier: 'featured',
   },
@@ -86,6 +87,7 @@ export const projects: Project[] = [
       el: 'First-person multiplayer shooter. Ρόλος Project Manager + 3D modeling.',
     },
     tags: ['Godot 4', 'Blender', 'Game Dev'],
+    liveUrl: 'https://youtu.be/v936F1D7NDk?si=DUrdizNKvl8V_f-A',
     tier: 'other',
   },
   {

@@ -63,6 +63,16 @@ export default function Contact() {
             <span className="text-purple" aria-hidden="true">gh</span>
             GitHub
           </a>
+          <a
+            href="https://www.youtube.com/@NikiGamingFun23"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube channel (opens in new tab)"
+            className="flex items-center gap-3 text-muted hover:text-white transition-colors text-sm"
+          >
+            <span className="text-purple" aria-hidden="true">▶</span>
+            YouTube
+          </a>
           <p className="text-muted text-sm mt-2">
             <span aria-hidden="true">📍 </span>Thessaloniki, Greece
           </p>
