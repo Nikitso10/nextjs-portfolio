@@ -44,6 +44,16 @@ export default function Contact() {
             nikitsolaki10@gmail.com
           </a>
           <a
+            href="https://www.metriqs.gr/el"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Metriqs website (opens in new tab)"
+            className="flex items-center gap-3 text-muted hover:text-white transition-colors text-sm"
+          >
+            <span className="text-purple font-bold" aria-hidden="true">M</span>
+            Metriqs
+          </a>
+          <a
             href="https://www.linkedin.com/in/niki-tsolaki/"
             target="_blank"
             rel="noopener noreferrer"

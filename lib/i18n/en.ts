@@ -1,4 +1,8 @@
 export const en = {
+  banner: {
+    text: '🚀 Metriqs is live — looking for pilot users from the κουφώματα industry.',
+    cta: 'Try it free →',
+  },
   nav: {
     about: 'About',
     projects: 'Projects',
@@ -12,6 +16,7 @@ export const en = {
     titleSuffix: '& Founder',
     bio: 'I build fast, beautiful web & mobile products.\nCreator of Metriqs — a SaaS for construction pros.',
     cta: 'View Work',
+    ctaMetriqs: 'Try Metriqs →',
     github: 'GitHub',
   },
   about: {
@@ -21,7 +26,7 @@ export const en = {
     location: 'Thessaloniki, Greece',
     education: 'BSc Computer Science, HOU',
     languages: 'Greek · English (C2) · French (B2)',
-    status: 'Open to opportunities',
+    status: 'Founder of Metriqs',
   },
   projects: {
     sectionLabel: 'Selected Work',

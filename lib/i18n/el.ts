@@ -1,6 +1,10 @@
 import type { Translations } from './en'
 
 export const el: Translations = {
+  banner: {
+    text: '🚀 Το Metriqs είναι live — ψάχνουμε pilot users από τον κλάδο κουφωμάτων.',
+    cta: 'Δοκίμασέ το δωρεάν →',
+  },
   nav: {
     about: 'Σχετικά',
     projects: 'Projects',
@@ -14,6 +18,7 @@ export const el: Translations = {
     titleSuffix: '& Ιδρύτρια',
     bio: 'Φτιάχνω γρήγορα, όμορφα web & mobile products.\nΔημιουργός του Metriqs — SaaS για επαγγελματίες κατασκευαστικού.',
     cta: 'Δες τη δουλειά μου',
+    ctaMetriqs: 'Δοκίμασε το Metriqs →',
     github: 'GitHub',
   },
   about: {
@@ -23,7 +28,7 @@ export const el: Translations = {
     location: 'Θεσσαλονίκη, Ελλάδα',
     education: 'Πτυχίο Πληροφορικής, ΕΑΠ',
     languages: 'Ελληνικά · Αγγλικά (C2) · Γαλλικά (B2)',
-    status: 'Ανοιχτή σε ευκαιρίες',
+    status: 'Ιδρύτρια του Metriqs',
   },
   projects: {
     sectionLabel: 'Επιλεγμένες Δουλειές',

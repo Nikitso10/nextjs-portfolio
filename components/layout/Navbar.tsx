@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '@/lib/context/LanguageContext'
+import AnnouncementBanner from '@/components/layout/AnnouncementBanner'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -51,6 +52,7 @@ export default function Navbar() {
       ref={headerRef}
       className="nav-header fixed top-0 left-0 right-0 z-50"
     >
+      <AnnouncementBanner />
       <nav ref={navRef} className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-4 transition-all duration-300">
         <a href="#" className="text-sm font-bold gradient-text">NT</a>
 

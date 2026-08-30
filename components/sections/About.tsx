@@ -10,7 +10,7 @@ export default function About() {
     { label: '📍', value: t.about.location },
     { label: '🎓', value: t.about.education },
     { label: '🌐', value: t.about.languages },
-    { label: '💼', value: t.about.status },
+    { label: '🚀', value: t.about.status },
   ]
 
   return (

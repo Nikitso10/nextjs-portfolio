@@ -36,9 +36,12 @@ export default function ProjectCard({ project, lang, hero = false }: Props) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-purple border border-purple/40 px-3 py-1 rounded hover:bg-purple/10 transition-colors"
+            className={hero
+              ? 'text-sm font-semibold text-white gradient-btn px-4 py-2 rounded-lg'
+              : 'text-xs text-purple border border-purple/40 px-3 py-1 rounded hover:bg-purple/10 transition-colors'
+            }
           >
-            Live ↗
+            {hero ? 'Try Metriqs →' : 'Live ↗'}
           </a>
         )}
         {project.githubUrl && (

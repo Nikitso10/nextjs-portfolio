@@ -47,21 +47,20 @@ export default function Hero() {
         <p className="text-muted text-base leading-relaxed border-l-2 border-purple pl-4 mb-10 hero-bio whitespace-pre-line">
           {t.hero.bio}
         </p>
-        <div className="flex gap-4 hero-cta">
+        <div className="flex gap-4 hero-cta flex-wrap">
           <a
-            href="#projects"
-            className="px-6 py-3 rounded-lg text-sm font-semibold text-white gradient-btn"
-          >
-            {t.hero.cta} ↓
-          </a>
-          <a
-            href="https://github.com/Nikitso10"
+            href="https://www.metriqs.gr/el"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub profile (opens in new tab)"
+            className="px-6 py-3 rounded-lg text-sm font-semibold text-white gradient-btn"
+          >
+            {t.hero.ctaMetriqs}
+          </a>
+          <a
+            href="#projects"
             className="px-6 py-3 rounded-lg text-sm font-semibold text-purple border border-purple/40 hover:bg-purple/10 transition-colors"
           >
-            {t.hero.github}
+            {t.hero.cta} ↓
           </a>
         </div>
       </div>
