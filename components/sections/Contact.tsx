@@ -44,7 +44,7 @@ export default function Contact() {
             nikitsolaki10@gmail.com
           </a>
           <a
-            href="https://linkedin.com/in/niki-tsolaki-434679275"
+            href="https://www.linkedin.com/in/niki-tsolaki/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile (opens in new tab)"
@@ -52,6 +52,26 @@ export default function Contact() {
           >
             <span className="text-purple" aria-hidden="true">in</span>
             LinkedIn
+          </a>
+          <a
+            href="https://www.facebook.com/tsolaki.niki/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook profile (opens in new tab)"
+            className="flex items-center gap-3 text-muted hover:text-white transition-colors text-sm"
+          >
+            <span className="text-purple" aria-hidden="true">f</span>
+            Facebook
+          </a>
+          <a
+            href="https://www.facebook.com/metriqs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Metriqs Facebook page (opens in new tab)"
+            className="flex items-center gap-3 text-muted hover:text-white transition-colors text-sm"
+          >
+            <span className="text-purple" aria-hidden="true">f</span>
+            Metriqs on Facebook
           </a>
           <a
             href="https://github.com/Nikitso10"
